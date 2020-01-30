@@ -30,9 +30,12 @@ class String
   end
 
   def count_sentences
-    arr = self.split(/[.?!]/)
-    arr.delete_if{|sentence| sentence.empty?}
-    arr.length
+    self.split(/[.?!]+/).size
+
+    #/  / more than one thing inside it 
+    #[] test for multiply things 
+    # + no dublicate if they next to each other its not gonna workd 
+
 
   end
 end
