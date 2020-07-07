@@ -1,20 +1,20 @@
-require 'pry'
+require "pry" 
 
-class String
+class String 
 
   def sentence?
-    
-  end
+    self.end_with?(".") 
+  end 
 
-  def question?
+  def question? 
+    self.end_with?("?")
+  end 
 
-  end
+  def exclamation?  
+    self.end_with?("!")
+  end 
 
-  def exclamation?
-
-  end
-
-  def count_sentences
-
-  end
-end
+  def count_sentences 
+    self.split(/[.?!]+/).count 
+  end 
+end 
